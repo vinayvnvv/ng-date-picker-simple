@@ -1,0 +1,34 @@
+<html ng-app='App'>
+	<head>
+		<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+		<!-- <link rel="stylesheet" href="src/ng-date-picker.css"> -->
+		<link rel="stylesheet" href="dist/ng-date-picker.min.css">
+	</head>
+	<body ng-controller="Main">
+
+			Hello World!!!
+			<input ng-date-picker ng-model='date' date-picker-config="config"> {{date}}
+	
+	</body>
+	<!-- <script type="text/javascript" src="src/ng-date-picker.js"></script> -->
+	<script type="text/javascript" src="dist/ng-date-picker.min.js"></script>
+
+	<script type="text/javascript">
+		angular.module('App', ['ngDatePicker'])
+			.controller('Main', ['$scope', function($scope){
+				// $scope.date = '2017-01-02T00:00:00.000Z';
+				$scope.config = {
+					outsideClose: false,
+					minDate: new Date(),
+					mask: 'MM-dd-yyyy'
+					// maxDate: new Date()
+				}
+			}]);
+
+
+	</script>
+
+
+</html>
+
+
